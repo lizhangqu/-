@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>选项卡演示</title>
+		<style>
+		
+		</style>
+	</head>
+	<body>
+		<form id="form1">
+			<input type="text" name="username"></input></br>
+			<input type="radio" name="sex" value="男">男</input></br>
+			<input type="radio" name="sex" value="女">女</input></br>
+			<input type="checkbox" name="aihao" value="足球">足球</input></br>
+			<input type="checkbox" name="aihao" value="篮球">篮球</input></br>
+			<input type="checkbox" name="aihao" value="乒乓球">乒乓球</input></br>
+			<select name="country">
+				<option value="china">中国</option>
+				<option value="american">美国</option>
+				<option value="japan">日本</option>
+			</select>
+			</br>
+			<input type="button" value="提交" id="submit"></input>
+		</form>
+		<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#submit").click(function(){
+					$.ajax({
+					type:'POST',
+					url:'getData.php',
+					data:$("#form1").serialize(),
+					success:function(data){
+						alert(data);
+					}
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>选项卡演示</title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			body{
+				font-family:"微软雅黑";
+				font-size:12px;
+				color:#666;
+			}
+			#tab{
+				width:600px;
+				height:230px;
+				margin:200px auto;
+				border:1px solid #ccc;
+				box-shadow:0px 0px 50px #aaa;
+			}
+			#tab ul li{
+				list-style:none;
+				float:left;
+				line-height:30px;
+				font-size:14px;
+				padding:0 20px;
+				
+			}
+			#tab ul .current{
+				background:#06a7e1;
+				color:#fff;
+				font-weight:bold;
+			}
+			#tab .content{
+				width:100%;
+				height:200px;
+				display:none;
+			}
+			#tab .tab1{
+				display:block;
+				background:red;
+			}
+			#tab .tab2{
+				background:#ff0;
+			}
+			#tab .tab3{
+				background:#0ff;
+			}
+			#tab .tab4{
+				background:#f0f;
+			}
+			#tab .tab5{
+				background:yellow;
+			}
+			.clear{
+				clear:both;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="tab">
+			<ul>
+				<li class="current">热播大片</li>
+				<li>华语精选</li>
+				<li>好莱坞精选</li>
+				<li>2014纲丝节</li>
+				<li>即将上线</li>
+			</ul>
+			<div class="clear"></div>
+			<div class="content tab1"></div>
+			<div class="content tab2"></div>
+			<div class="content tab3"></div>
+			<div class="content tab4"></div>
+			<div class="content tab5"></div>
+		</div>
+		<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#tab").find("li").hover(function(){
+					$(this).addClass("current").siblings().removeClass("current");
+					$(".content").hide().eq($(this).index()).show();
+					var content =$(".content").eq($(this).index())
+					//发起ajax请求
+					$.ajax({
+						type:"post",
+						url:"data.html",
+						data:"",
+						beforeSend:function(){
+							content.html("<img src='loading.gif'/>");
+						},
+						success:function(data){
+							content.html(data);
+						}
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

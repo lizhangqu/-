@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>右键菜单</title>
+  <style>
+	*{margin:0px;padding:0px;}
+	body{font-size:12px;font-family:"微软雅黑"}
+	#menu{width:200px;border:1px solid #ccc;margin:5px;box-shadow:0 0 5em #ccc;display:none;position:absolute;}
+	#menu ul li{list-style:none;list-style-type:none}
+	#menu ul li{height:35px;border-bottom:1px solid #ccc;line-height:35px;padding-left:15px;}
+	#menu ul li:hover{background:green;color:#fff;}
+  </style>
+ </head>
+ <body>	
+	<h2 id="c">右键菜单，请点击鼠标右键</h2>
+	<div id="menu">
+		<ul>
+			<li onclick="menu(1)">保存</li>
+			<li onclick="menu(2)">添加</li>
+			<li onclick="menu(3)">删除</li>
+		</ul>	
+	</div>
+	<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+		//第一步:开发一个右键 第一步如何屏蔽浏览器自带的右键
+		 document.oncontextmenu = function(){return false;};
+	
+		 //第二步 通过右键鼠标的方式获取你点击的是右击还是左击
+		 //获取鼠标的x y周坐标
+		 //赋给菜单层left和top
+
+		 //javascript版本
+		 /*document.onmousedown = function(e){
+			 e = e||window.event;
+			 var key = e.which || e.button;//右键是3 滑轮是2 左键1
+			 var menuDom = document.getElementById("menu");
+			 if(key==3 || key==2){
+				 var x = e.clientX;
+				 var y = e.clientY;
+				 menuDom.style.display = "block";	
+				 menuDom.style.left = x+"px";
+				 menuDom.style.top = y+"px";
+			 }
+		 };*/
+			
+         //jquery写菜单
+		 $("#c").on("mousedown",function(e){
+			 var key = e.which;//右键是3 滑轮是2 左键1
+			 var menu = $("#menu");
+			 if(key==3){
+				 var x = e.clientX;
+				 var y = e.clientY;
+				 menu.show().css({left:x,top:y});
+			 }
+		 });
+
+		 //将一个菜单的业务全部定义在这里。是因方便我们去管理我们的右键菜单
+		 function menu(flag){
+			if(flag==1){
+				alert("您点击的保存");
+			}else if(flag==2){
+				alert("您点击的添加");
+			}else if(flag==3){
+				alert("您点击的删除");
+			}
+			$("#menu").hide();
+		 };
+	</script>
+ </body>
+</html>

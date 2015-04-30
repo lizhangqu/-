@@ -1,0 +1,418 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>延时加载</title>
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+			}
+			body{
+				font-size:12px;
+				font-family:"微软雅黑";
+				background:#f9f9f9;
+			}
+			img{
+				border:0px;
+				display:block;
+				border-radius:2px;
+			}
+			.content{
+				width:906px;
+				height:1000px;
+				margin:30px auto;
+			}
+			.content ul li{
+				list-style:none;
+				float:left;
+				margin-right:12px;
+				margin-bottom:15px;
+				border-radius:2px;
+				background:#fff;
+				box-shadow:0px 1px 3px rgba(0,0,0,0.3);
+			}
+			.content ul li p{
+				width:288px;
+				height:35px;
+				line-height:35px;
+				text-align:center;
+			}
+		</style>
+		<script type="text/javascript" src="./js/jquery.js"></script>
+		<script type="text/javascript" src="./js/jquery.lazyload.js"></script>
+		<script type="text/javascript">
+			var img = "./images/loading.gif";
+			jQuery.noConflict()(function(){
+				jQuery.noConflict()("img").lazyload({placeholder:img,effect:"fadeIn"});
+			});
+		</script>
+	</head>
+	<body>
+
+		<div class="content">
+			<ul>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="1"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="2"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="1"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="2"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="1"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="2"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="1"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="2"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="1"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="2"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="1"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="2"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="1"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="2"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="1"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="2"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="1"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="2"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="1"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="2"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="1"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="2"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="1"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="2"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="1"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="2"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="1"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="2"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="1"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="2"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="1"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="2"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="1"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="2"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="1"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="2"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="1"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="2"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./images/1.jpg" width="" height="" alt="3"/>
+					</a>
+					<p>这是描述这是描述这是描述</p>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

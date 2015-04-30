@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>滑动导航演示</title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			body{
+				font-family:"微软雅黑";
+				font-size:12px;
+				color:#666;
+			}
+
+			.nav{
+				width:750px;
+				margin:100px auto;
+			}
+			.nav .header{
+				width:750px;
+				height:34px;
+				border-bottom:1px solid #dadada;
+				position:relative;
+			}
+			.nav .header ul li{
+				float:left;
+				width:90px;
+				height:34px;
+				line-height:34px;
+				text-align:center;
+				list-style:none;
+			}
+			.nav .header ul li a{
+				text-decoration:none;
+				font-size:14px;
+				color:#333;
+			}
+			.nav .header ul li a:hover{
+				color:#039ae3;
+			}
+			.nav .header ul .current a{
+				color:#039ae3;
+			}
+			.nav .header .underline{
+				width:90px;
+				border-bottom:2px solid #039ae3;
+				position:absolute;
+				left:0px;
+				bottom:-1px;
+			}
+			.nav .n_all{
+				width:750px;
+				height:300px;
+			}
+			.nav .n_all .list{
+				width:750px;
+				height:300px;
+				background:red;
+				display:none;
+			}
+			.nav .n_all .one{
+				display:block;
+				background:#ff0000;
+			}
+			.nav .n_all .two{
+				background:#00ff00;
+			}
+			.nav .n_all .three{
+				background:#0000ff;
+			}
+			.nav .n_all .four{
+				background:#00ffff;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="nav">
+			<div class="header">
+				<p class="underline"></p>
+				<ul>
+					<li><a href="#">编程开发</a></li>
+					<li><a href="#">工具软件</a></li>
+					<li><a href="#">编程开发</a></li>
+					<li><a href="#">编程开发</a></li>
+				</ul>
+			</div>
+			<div class="n_all">
+				<div class="list one"></div>
+				<div class="list two"></div>
+				<div class="list three"></div>
+				<div class="list four"></div>
+			</div>
+		</div>
+		<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".nav").find("li").hover(function(){
+					var n_left=($(window).width()-750)/2;
+					var left=$(this).offset().left-n_left
+					//$(".nav").find(".underline").stop;
+					$(this).addClass("current").siblings().removeClass("current");
+					$(".nav").find(".underline").animate({left:left},50);
+					$(".list").hide().eq($(this).index()).show();
+				});
+			});
+		</script>
+	</body>
+</html>
